@@ -11,6 +11,7 @@ const Home = () => {
       try {
         const res = await axios.get(`${backendUrl}/rides`) //added
         setRides(res.data)
+        // console.log(res.data) this is data
       } catch (err) {
         console.error('Error in getRides :', err)
       }
@@ -23,7 +24,7 @@ const Home = () => {
   return (
     <div className="">
       {rides ? (
-        <div className="">
+        <div className="cards">
           {rides.map((ride, index) => (
             <RideCard key={index} ride={ride} />
           ))}

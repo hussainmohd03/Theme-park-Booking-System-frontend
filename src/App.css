@@ -2,3 +2,37 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.ride-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background: #f9f9f9;
+  transition: transform 0.2s ease;
+}
+
+.ride-card:hover {
+  transform: scale(1.02);
+}
+
+.ride-card h3 {
+  margin: 0 0 8px;
+}
+
+.ride-card p {
+  color: #555;
+}
+
+.ride-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
