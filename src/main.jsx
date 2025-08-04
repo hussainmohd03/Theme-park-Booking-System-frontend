@@ -4,6 +4,7 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    {/* may need to be BrowserRouter */}
     <App />
-  </StrictMode>,
+  </StrictMode>
 )
