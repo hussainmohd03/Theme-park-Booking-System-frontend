@@ -5,7 +5,7 @@ const Nav = () => {
       <h3>Theme Park</h3>
       <div>
         <NavLink to="/">Home</NavLink>
-        <NavLink>Some </NavLink>
+        <NavLink to="/rides"> Rides </NavLink>
         <NavLink>Some</NavLink>
       </div>
     </nav>

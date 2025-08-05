@@ -1,13 +1,17 @@
+import { Link } from 'react-router-dom'
+
 const RideCard = ({ ride }) => {
   return (
-    <div className="ride-card">
-      <h3>{ride.name}</h3>
-      <p>{ride.description}</p>
-      <div className="img-wrapper">
-        <img src={ride.imageUrl} alt={ride.name} className="ride-image" />
+    <Link to={`/rides/${ride._id}`}>
+      <div className="ride-card">
+        <h3>{ride.name}</h3>
+        <p>{ride.description}</p>
+        <div className="img-wrapper">
+          <img src={ride.imageUrl} alt={ride.name} className="ride-image" />
+        </div>
+        <p>Age Limit: {ride.ageLimit}+</p>
       </div>
-      <p>Age Limit: {ride.ageLimit}+</p>
-    </div>
+    </Link>
   )
 }
 
