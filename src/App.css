@@ -1,29 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
 body {
   margin: 0;
   box-sizing: border-box;
-  background: rgb(91, 90, 90);
+  background: #494d60;
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
 }
+
+a {
+  text-decoration: none;
+  color: #3c2bac;
+}
+
+a:visited {
+  color: #3c2bac;
+}
+
+.one-ride-in-a-page {
+  border: 1px solid #4947478f;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgb(154, 153, 153);
+  border-radius: 8px;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.841);
+  font-family: 'Poppins', sans-serif;
+  color: #1e1e1e;
+}
+
+.one-ride-in-a-page h3 {
+  font-family: 'Bungee', cursive;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.one-ride-in-a-page p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.one-ride-in-a-page .img-wrapper {
+  margin-top: 20px;
+}
+
+.one-ride-in-a-page .ride-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 20px;
+  text-decoration: none;
 }
 
 .ride-card {
-  /* border: 1px solid #ccc; */
+  border: 1px solid #494d60;
   border-radius: 8px;
   padding: 16px;
-  background: rgb(154, 153, 153);
+  background: #e5eaf5;
   transition: transform 0.2s ease;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.841);
+  text-decoration: none;
+}
+.ride-name {
+  font-family: 'Bungee', cursive;
+  text-decoration: none;
+  font-weight: 300;
 }
 .ride-desc {
   overflow: hidden;
+  text-decoration: none;
 }
 
 .ride-card:hover {
   transform: scale(1.02);
+  text-decoration: none;
 }
 
 .ride-card h3 {
@@ -31,7 +89,7 @@ body {
 }
 
 .ride-card p {
-  color: #555;
+  color: #3b3b3b;
 }
 
 .ride-image {
@@ -47,11 +105,15 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: rgba(255, 255, 255, 0.05);
+  background: #23242d95;
   backdrop-filter: blur(12px);
-  box-shadow: 0 0 20px rgba(0, 255, 213, 0.15);
+  /* box-shadow: 0 0 20px rgba(0, 255, 213, 0.15); */
+  box-shadow: 0px 1px 2px rgba(0, 255, 255, 0.5),
+    0px 2px 4px rgba(0, 255, 255, 0.5), 0px 4px 8px rgba(0, 255, 255, 0.5),
+    0px 8px 16px rgba(0, 255, 255, 0.5);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .navbar .logo {
@@ -74,6 +136,7 @@ body {
 
 .nav-links a:hover {
   color: #0fffc1;
+  text-decoration: none;
 }
 
 .nav-button {
@@ -82,4 +145,5 @@ body {
   color: #000;
   border-radius: 20px;
   box-shadow: 0 0 10px #0fffc1;
+  text-decoration: none;
 }

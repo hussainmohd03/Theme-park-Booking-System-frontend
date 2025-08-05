@@ -22,13 +22,13 @@ const Ride = () => {
   }, [])
 
   return (
-    <div className="ride-card">
+    <div className="">
       {ride ? (
-        <div>
+        <div className="one-ride-in-a-page">
           <h3>{ride.name}</h3>
-          <p>{ride.description}</p>
           <div className="img-wrapper">
             <img src={ride.imageUrl} alt={ride.name} className="ride-image" />
+            <p>{ride.description}</p>
           </div>
           <p>Age Limit: {ride.ageLimit}+</p>
         </div>
