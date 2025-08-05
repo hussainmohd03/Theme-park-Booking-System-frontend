@@ -1,6 +1,8 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  background: rgb(91, 90, 90);
+  font-family: 'Poppins', sans-serif;
 }
 .cards {
   display: grid;
@@ -10,11 +12,14 @@ body {
 }
 
 .ride-card {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 8px;
   padding: 16px;
-  background: #f9f9f9;
+  background: rgb(154, 153, 153);
   transition: transform 0.2s ease;
+}
+.ride-desc {
+  overflow: hidden;
 }
 
 .ride-card:hover {
@@ -35,4 +40,46 @@ body {
   object-fit: cover;
   border-radius: 6px;
   display: block;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.15);
+  position: sticky;
+  top: 0;
+}
+
+.navbar .logo {
+  color: #0fffc1;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar .nav-links a {
+  color: #eee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0fffc1;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  background: #0fffc1;
+  color: #000;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #0fffc1;
 }

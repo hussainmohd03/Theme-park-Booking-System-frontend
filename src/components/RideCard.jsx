@@ -2,7 +2,7 @@ const RideCard = ({ ride }) => {
   return (
     <div className="ride-card">
       <h3>{ride.name}</h3>
-      <p>{ride.description}</p>
+      <p className="ride-desc">{ride.description}</p>
       <div className="img-wrapper">
         <img src={ride.imageUrl} alt={ride.name} className="ride-image" />
       </div>
