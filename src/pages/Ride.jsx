@@ -11,7 +11,7 @@ const Ride = () => {
   useEffect(() => {
     const getRide = async () => {
       try {
-        const res = await axios.get(`${backendUrl}/rides/${id}`)
+        const res = await axios.get(`http://localhost:3010/rides/${id}`)
         setRide(res.data)
         console.log(res.data)
       } catch (err) {
