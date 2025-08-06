@@ -3,6 +3,7 @@ import Nav from './components/Nav'
 import Rides from './pages/Rides'
 import './App.css'
 import Home from './pages/Home'
+import BookForm from './pages/BookForm'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/rides" element={<Rides />} />
+          <Route path="/booking" element={<BookForm />} />
         </Routes>
       </div>
     </>
