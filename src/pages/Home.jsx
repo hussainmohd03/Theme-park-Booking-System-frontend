@@ -1,4 +1,4 @@
-import GlowLights from '../components/GlowLights'
+import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <>
@@ -13,10 +13,11 @@ const Home = () => {
           the carnival lights!
         </p>
         <div className="orb"> </div>
-        <button className="glow-on-hover" type="button">
-          LETS GO FOR A RIDE !
-        </button>
-        {/* <GlowLights /> */}
+        <Link to="/rides">
+          <button className="glow-on-hover" type="button">
+            LETS GO FOR A RIDE !
+          </button>
+        </Link>
       </div>
     </>
   )
