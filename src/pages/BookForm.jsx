@@ -35,6 +35,7 @@ const BookForm = () => {
     ticketTypeRef.current.value = ''
     notesRef.current.value = ''
   }
+
   return (
     <>
       <section className="booking-container">
@@ -42,23 +43,14 @@ const BookForm = () => {
           <form onSubmit={handleSubmit} className="book-form">
             <h1>Book a Ticket</h1>
             <label htmlFor="name">Name:</label>
-
             <input type="text" name="name" ref={nameRef} />
-
             <label htmlFor="email">Email:</label>
-
             <input type="email" name="email" ref={emailRef} />
-
             <label htmlFor="phone">Phone:</label>
-
             <input type="tel" name="phone" pattern="[0-9]{8}" ref={phoneRef} />
-
             <label htmlFor="date">Date:</label>
-
             <input type="date" name="date" ref={dateRef} />
-
             <label htmlFor="ticketType">Ticket Type:</label>
-
             <select name="ticketType" ref={ticketTypeRef}>
               <option value="" defaultValue disabled>
                 Select Ticket Type
