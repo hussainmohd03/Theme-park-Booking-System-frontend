@@ -5,6 +5,7 @@ const Nav = () => {
       <div className="logo">🎢 WonderWorld</div>
       <div className="nav-links">
         <NavLink to="/">Home</NavLink>
+
         <NavLink to="/rides">Rides</NavLink>
         <NavLink id="nav-button" to="/booking">
           Book Now
