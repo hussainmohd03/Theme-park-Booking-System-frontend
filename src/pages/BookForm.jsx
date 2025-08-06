@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import axios from 'axios'
 const BookForm = () => {
   const nameRef = useRef(null)
@@ -28,23 +28,37 @@ const BookForm = () => {
       notes: notesRef.current.value
     }
     const res = await axios.post('http://localhost:3010/booking', data)
-
-    console.log(res)
+    nameRef.current.value = ''
+    emailRef.current.value = ''
+    phoneRef.current.value = 0
+    dateRef.current.value = ''
+    ticketTypeRef.current.value = ''
+    notesRef.current.value = ''
   }
   return (
     <>
-      <section>
-        <section className="book-form">
-          <form onSubmit={handleSubmit}>
+      <section className="booking-container">
+        <section className="book-form-container">
+          <form onSubmit={handleSubmit} className="book-form">
+            <h1>Book a Ticket</h1>
             <label htmlFor="name">Name:</label>
+
             <input type="text" name="name" ref={nameRef} />
+
             <label htmlFor="email">Email:</label>
+
             <input type="email" name="email" ref={emailRef} />
+
             <label htmlFor="phone">Phone:</label>
+
             <input type="tel" name="phone" pattern="[0-9]{8}" ref={phoneRef} />
+
             <label htmlFor="date">Date:</label>
+
             <input type="date" name="date" ref={dateRef} />
+
             <label htmlFor="ticketType">Ticket Type:</label>
+
             <select name="ticketType" ref={ticketTypeRef}>
               <option value="" defaultValue disabled>
                 Select Ticket Type
@@ -54,7 +68,9 @@ const BookForm = () => {
               <option value="VIP-Galactic">VIP Galactic</option>
             </select>
             <label htmlFor="notes">Notes:</label>
+
             <textarea type="text" cols="40" rows="10" ref={notesRef} />
+
             <button type="submit">Book</button>
           </form>
         </section>
