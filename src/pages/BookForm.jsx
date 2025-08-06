@@ -1,5 +1,7 @@
-import { useRef } from 'react'
+import { use, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 import axios from 'axios'
+import { data } from 'react-router-dom'
 const BookForm = () => {
   const nameRef = useRef(null)
   const emailRef = useRef(null)
@@ -7,11 +9,25 @@ const BookForm = () => {
   const dateRef = useRef(null)
   const ticketTypeRef = useRef(null)
   const notesRef = useRef(null)
+  const formRef = useRef()
+
+  const sendEmail = (data) => {
+    try {
+      emailjs.send(
+        'service_7nhfiaz',
+        'template_kaw57ah',
+        data,
+        '4oiNwQfr7LWiX4aYl'
+      )
+    } catch (error) {
+      throw error
+    }
+  }
 
   const initialFormValues = {
     name: '',
     email: '',
-    phone: 0,
+    phone: '',
     date: '',
     ticketType: '',
     notes: ''
@@ -28,9 +44,12 @@ const BookForm = () => {
       notes: notesRef.current.value
     }
     const res = await axios.post('http://localhost:3010/booking', data)
+
+    sendEmail(data)
+
     nameRef.current.value = ''
     emailRef.current.value = ''
-    phoneRef.current.value = 0
+    phoneRef.current.value = ''
     dateRef.current.value = ''
     ticketTypeRef.current.value = ''
     notesRef.current.value = ''
