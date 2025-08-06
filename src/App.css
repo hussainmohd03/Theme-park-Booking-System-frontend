@@ -403,3 +403,52 @@ textarea:focus {
   height: 100vh;
   text-align: center;
 }
+
+.booked-tickets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+  text-decoration: none;
+  height: 270px;
+}
+
+.booking-article {
+  background-image: url(/public/minimalist-monochromatic-blue-wallpaper.jpg);
+  background-position: center;
+  background-size: 470px 290px;
+  background-repeat: repeat;
+  border-radius: 20px;
+  padding-bottom: 7px;
+}
+.booked-title {
+  /* margin: 8px; */
+  font-family: 'Bungee', cursive;
+  text-align: center;
+}
+
+.booking-info {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 110px;
+  padding-right: 110px;
+  font-family: 'Bungee', cursive;
+  letter-spacing: 0.04cm;
+  font-size: 14px;
+  color: #01021de0;
+}
+
+.delete-T {
+  background-color: #450a61b9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-T:hover {
+  background-color: #c6351c;
+}

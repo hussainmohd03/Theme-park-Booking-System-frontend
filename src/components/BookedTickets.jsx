@@ -17,10 +17,8 @@ const BookedTickets = () => {
 
   return (
     <>
-      {' '}
+      <h2 className="booked-title">Booked Tickets</h2>
       <section className="booked-tickets">
-        <h2>Booked Tickets</h2>
-
         {tickets && tickets.map((ticket) => <Ticket ticket={ticket} />)}
       </section>
     </>
