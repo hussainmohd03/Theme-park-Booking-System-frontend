@@ -17,9 +17,19 @@ const BookForm = () => {
     notes: ''
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    
+    const data = {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      phone: phoneRef.current.value,
+      date: dateRef.current.value,
+      ticketType: ticketTypeRef.current.value,
+      notes: notesRef.current.value
+    }
+    const res = await axios.post('http://localhost:3010/booking', data)
+
+    console.log(res)
   }
   return (
     <>
